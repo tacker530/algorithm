@@ -19,7 +19,7 @@ end
     pp "i=#{i}, j=#{j}, w=#{w[i]}, v=#{v[i]}"
 
     if j < w[i] then
-      dp[i-1][j]  # 重さが越えているならば選択しない（直前と同じ）
+      dp[i][j] = dp[i-1][j]  # 重さが越えているならば選択しない（直前と同じ）
     end
     if j >= w[i] then
       v1 = dp[i-1][j]
